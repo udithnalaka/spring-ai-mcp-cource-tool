@@ -3,12 +3,13 @@
 ## Overview
 
 Implements the Model Context Protocol (MCP) server for providing course information
-for integrating external data sources with AI models through Spring AI.
+for integrating external data sources (e.g- Claude Desktop) with AI models through Spring AI.
 
-The server exposes two main tools:
+The server exposes the below tools:
 
-* A tool to retrieve all available courses
-* A tool to search for specific courses by title
+* get_courses: A tool to retrieve all available courses
+* get_course: A tool to search for specific courses by title
+* search_courses: A tool to search all titles matching the keyword
 
 ### Tools & Frameworks used
 
@@ -65,7 +66,7 @@ The server exposes two main tools:
            console:
 
 
-### Run application
+### Run MCP server locally
 
 1. build the application jar (under target)
 
@@ -76,14 +77,18 @@ The server exposes two main tools:
 
 
 3. MCP Inspector connected and Tools displayed
-![img_1.png](img_1.png)
+![img_4.png](img_4.png)
 
 
 ### Test the MCP Server - Course tool
 
 1. click on of the tools available. 
-   e.g: get cource
+
+   e.g: get course
+
+
 2. enter a title in the text box 
+   
    e.g: No SQL
 
 
@@ -91,5 +96,5 @@ The server exposes two main tools:
   ![img_3.png](img_3.png)
 
 
-4. Optionally - Connect from Claude Desktop and connect to the Tool running in MCP server to answer related to the course questions.
-
+4. **Optionally** - Configure the MCP server tools mentioned above and connect from Claude Desktop to use the Tools running in MCP server to answer related to the course questions.
+ 
